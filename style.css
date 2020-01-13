@@ -9,29 +9,31 @@ body {
 #pageBody {
     background-color:tomato;
     padding-top:215px;
+    text-align:center;
+}
+
+#doorIcon {
+    color: #7F7F7F;
+    font-size: 35px;
 }
 
 h1 {
-    text-align: center;
     color:white;
     font-size:55px;
 }
 
 h2 {
-    text-align: center;
     color:white;
     font-size:40px;
 }
 
 h3 {
-    text-align: center;
     color:white;
     font-size:24px;
 }
 
 #about {
     padding-top:80px;
-    text-align: center;
 }
 
 .textBox {
@@ -47,6 +49,7 @@ h3 {
 }
 
 footer {
+    margin-top: 15px;
     background-color: white;
 }
 
@@ -56,10 +59,30 @@ footer i {
     margin: 0px 20px;
 }
 
-footer a {
+footer i:hover {
+    color:maroon;
+}
+
+a {
     color: tomato;
+}
+
+a:hover {
+    color:maroon;
 }
 
 footer p {
     font-size: 12px;
+}
+
+.websiteHolder {
+    background-color: white;
+    display: inline-block;
+    margin: 30px 0px;
+    border-radius: .4em;
+    padding:50px;
+}
+
+.websiteHolder:hover {
+    background-color: lightgray;
 }
