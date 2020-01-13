@@ -25,7 +25,7 @@
         
         <nav id="pageNavigator" class="navbar navbar-light fixed-top">
             
-            <a class="navbar-brand" href="#">PLACEHOLDER</a>
+            <a class="navbar-brand" href="#"><span id="doorIcon"><i class="fas fa-door-open"></i></span></a>
             
             <button class="navbar-toggler" id="toggleButton" type="button" data-toggle="collapse" data-target="#pageLocations" aria-controls="pageLocations" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- figure out how to remove border -->
@@ -42,9 +42,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -74,6 +71,29 @@
             
             <div id="portfolio">
                 <h2>Portfolio</h2>
+                <div class="textBox col-sm-10">
+                    <p>
+                        Source code for multiple projects (including this website!) can be found on my <a href="https://github.com/mhultgren">GitHub</a> account, and websites I have designed can be found below.
+                    </p>
+                </div>
+                <!-- Put iframes of websites in squares below -->
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="websiteHolder">
+                            Website under construction... <i class="fas fa-pencil-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="websiteHolder">
+                            Website under construction... <i class="fas fa-pencil-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="websiteHolder">
+                            Website under construction... <i class="fas fa-pencil-alt"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -87,7 +107,7 @@
             </div>
             <div class="col-sm-12 text-center">
                 <p>
-                    <span style="font-size:10px;">&#9400;</span> Myles Hultgren 2020. View source code <a href="">here</a>
+                    <span style="font-size:10px;">&#9400;</span> Myles Hultgren 2020. View source code <a href="https://github.com/mhultgren/Portfolio-Website">here</a>
                 </p>
             </div>
         </footer>
@@ -100,13 +120,20 @@
             $("#toggleButton").click(function() {
                 
                 var toggleButton = $("#toggleButton");
+                var doorIcon = $("#doorIcon");
                                 
                 if (toggleButton.css("color") == "rgb(255, 99, 71)") {
                     toggleButton.css("color", "#7F7F7F");
+                    doorIcon.css("color", "#7F7F7F");
                 } else {
                     toggleButton.css("color", "tomato");
+                    doorIcon.css("color", "tomato");
                 }
                 
+            });
+            
+            window.addEventListener("hashchange", function () {
+                window.scrollTo(window.scrollX, window.scrollY - 130);
             });
             
         </script>
